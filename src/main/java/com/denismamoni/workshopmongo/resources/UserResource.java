@@ -19,7 +19,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.denismamoni.workshopmongo.domain.Post;
 import com.denismamoni.workshopmongo.domain.User;
 import com.denismamoni.workshopmongo.dto.UserDTO;
-import com.denismamoni.workshopmongo.services.PostService;
 import com.denismamoni.workshopmongo.services.UserService;
 
 @RestController
@@ -28,9 +27,6 @@ public class UserResource {
 
 	@Autowired
 	UserService userService;
-	
-	@Autowired
-	PostService postService;
 	
 	@GetMapping
 	public ResponseEntity<List<UserDTO>> findAll() {
